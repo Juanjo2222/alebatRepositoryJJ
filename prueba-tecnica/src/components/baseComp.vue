@@ -108,6 +108,14 @@
               <section class="highlights-arriba-derecha">
                 <p class="humidity">Humidity</p>
                 <p class= "humid-value" v-if="relative_humidity_2m">{{ relative_humidity_2m }} {{ humidUnits }}</p>
+                <div class="num-por">
+                  <p>0</p>
+                  <p>50</p>
+                  <p>100</p>
+              </div>
+                <div class="humidity-bar" v-if="relative_humidity_2m">
+                <div class="humidity-fill" :style="{ width: relative_humidity_2m + '%' }"></div>
+            </div>
               </section>
             </section>
             <section class="highlights-abajo">

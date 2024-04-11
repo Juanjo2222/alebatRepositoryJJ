@@ -370,6 +370,32 @@ text-align: center;
   height: 2rem;
 
 }
+
+.humidity-bar {
+ 
+  width: 70%;
+  margin-left:5rem;
+  height: 10px;
+  background-color: #ddd;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.humidity-fill {
+  height: 100%;
+  background-color: #4CAF50;
+  border-radius: 5px;
+}
+
+.num-por {
+
+  display:flex;
+  justify-content: space-around;
+  color:white;
+  margin-top:1rem;
+
+}
+
 @media (max-width: 70rem) {
 
   .container {
