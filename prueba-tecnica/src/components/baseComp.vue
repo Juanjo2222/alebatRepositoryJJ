@@ -11,7 +11,9 @@
         <img class="weather" v-if="weather_code_current==61 && isMenuOpen==false"  src="../assets/snowy.png">
         <img class="weather" v-if="weather_code_current==80 && isMenuOpen==false"  src="../assets/stormy.png">
         
-        <p class= "temp-value" v-if="isMenuOpen==false">{{ temperature_2m }} {{ tempUnits }} </p>
+        <p class= "temp-value" v-if="isMenuOpen==false && tempUnits==tempUnits_c">{{ temperature_2m }} {{ tempUnits }} </p>
+        <p class= "temp-value" v-if="isMenuOpen==false && tempUnits==tempUnits_f">{{ (temperature_2m*9/5)+32 }} {{ tempUnits }} </p>
+
         <p class="date" v-if="isMenuOpen==false">Today - {{ time }}</p>
         <div class="ubicacion">
           <img class="ubication-img" v-if="isMenuOpen==false" src="../assets/ubication.png">
@@ -41,8 +43,10 @@
               <img class="weather-days-left" v-if="weather_code_daily && weather_code_daily[1]==61"  src="../assets/snowy.png">
               <img class="weather-days-left" v-if="weather_code_daily && weather_code_daily[1]==80"  src="../assets/stormy.png">
               <section class="days-left-temp" v-if="temperature_2m_max && temperature_2m_min">
-                  {{ temperature_2m_max[1]}} {{ tempUnits }}
-                  <span class="t-min">{{ temperature_2m_min[1]}} {{ tempUnits }} </span>
+                  <span class="t-max" v-if="tempUnits==tempUnits_c">{{ temperature_2m_max[1].toFixed(1)}} {{ tempUnits }}</span>
+                  <span class="t-max" v-if="tempUnits==tempUnits_f">{{ (((temperature_2m_max[1]*9)/5)+32).toFixed(1)}} {{ tempUnits }} </span>
+                  <span class="t-min" v-if="tempUnits==tempUnits_c">{{ temperature_2m_min[1].toFixed(1)}} {{ tempUnits }} </span>
+                  <span class="t-min" v-if="tempUnits==tempUnits_f">{{ (((temperature_2m_min[1]*9)/5)+32).toFixed(1)}} {{ tempUnits }} </span>
                 </section>
           </section>
           <section class="en-dos-dias">
@@ -54,8 +58,10 @@
               <img class="weather-days-left" v-if="weather_code_daily && weather_code_daily[2]==61"  src="../assets/snowy.png">
               <img class="weather-days-left" v-if="weather_code_daily && weather_code_daily[2]==80"  src="../assets/stormy.png">
                 <section class="days-left-temp" v-if="temperature_2m_max && temperature_2m_min">
-                  {{ temperature_2m_max[2]}} {{ tempUnits }}
-                  <span class="t-min">{{ temperature_2m_min[2]}} {{ tempUnits }}</span>
+                  <span class="t-max" v-if="tempUnits==tempUnits_c">{{ temperature_2m_max[2].toFixed(1)}} {{ tempUnits }}</span>
+                  <span class="t-max" v-if="tempUnits==tempUnits_f">{{ (((temperature_2m_max[2]*9)/5)+32).toFixed(1)}} {{ tempUnits }} </span>
+                  <span class="t-min" v-if="tempUnits==tempUnits_c">{{ temperature_2m_min[2].toFixed(1)}} {{ tempUnits }} </span>
+                  <span class="t-min" v-if="tempUnits==tempUnits_f">{{ (((temperature_2m_min[2]*9)/5)+32).toFixed(1)}} {{ tempUnits }} </span>
                 </section>
           </section>
           <section class="en-tres-dias">
@@ -67,8 +73,10 @@
               <img class="weather-days-left" v-if="weather_code_daily && weather_code_daily[3]==61"  src="../assets/snowy.png">
               <img class="weather-days-left" v-if="weather_code_daily && weather_code_daily[3]==80"  src="../assets/stormy.png">
                 <section class="days-left-temp" v-if="temperature_2m_max && temperature_2m_min">
-                  {{ temperature_2m_max[3]}} {{ tempUnits }}
-                  <span class="t-min">{{ temperature_2m_min[3]}}{{ tempUnits }} </span>
+                  <span class="t-max" v-if="tempUnits==tempUnits_c">{{ temperature_2m_max[3].toFixed(1)}} {{ tempUnits }}</span>
+                  <span class="t-max" v-if="tempUnits==tempUnits_f">{{ (((temperature_2m_max[3]*9)/5)+32).toFixed(1)}} {{ tempUnits }} </span>
+                  <span class="t-min" v-if="tempUnits==tempUnits_c">{{ temperature_2m_min[3].toFixed(1)}} {{ tempUnits }} </span>
+                  <span class="t-min" v-if="tempUnits==tempUnits_f">{{ (((temperature_2m_min[3]*9)/5)+32).toFixed(1)}} {{ tempUnits }} </span>
                 </section>
           </section>
           <section class="en-cuatro-dias">
@@ -79,8 +87,10 @@
               <img class="weather-days-left" v-if="weather_code_daily && weather_code_daily[4]==61"  src="../assets/snowy.png">
               <img class="weather-days-left" v-if="weather_code_daily && weather_code_daily[4]==80"  src="../assets/stormy.png">
                 <section class="days-left-temp" v-if="temperature_2m_max && temperature_2m_min">
-                  {{ temperature_2m_max[4]}} {{ tempUnits }}
-                  <span class="t-min">{{ temperature_2m_min[4]}} {{ tempUnits }} </span>
+                  <span class="t-max" v-if="tempUnits==tempUnits_c">{{ temperature_2m_max[4].toFixed(1)}} {{ tempUnits }}</span>
+                  <span class="t-max" v-if="tempUnits==tempUnits_f">{{ (((temperature_2m_max[4]*9)/5)+32).toFixed(1)}} {{ tempUnits }} </span>
+                  <span class="t-min" v-if="tempUnits==tempUnits_c">{{ temperature_2m_min[4].toFixed(1)}} {{ tempUnits }} </span>
+                  <span class="t-min" v-if="tempUnits==tempUnits_f">{{ (((temperature_2m_min[4]*9)/5)+32).toFixed(1)}} {{ tempUnits }} </span>
                 </section>
           </section>
           <section class="en-cinco-dias">
@@ -92,8 +102,10 @@
               <img class="weather-days-left" v-if="weather_code_daily && weather_code_daily[5]==61"  src="../assets/snowy.png">
               <img class="weather-days-left" v-if="weather_code_daily && weather_code_daily[5]==80"  src="../assets/stormy.png">
                 <section class="days-left-temp" v-if="temperature_2m_max && temperature_2m_min">
-                  {{ temperature_2m_max[5]}} {{ tempUnits }} 
-                  <span class="t-min">{{ temperature_2m_min[5]}} {{ tempUnits }}</span>
+                  <span class="t-max" v-if="tempUnits==tempUnits_c">{{ temperature_2m_max[5].toFixed(1)}} {{ tempUnits }}</span>
+                  <span class="t-max" v-if="tempUnits==tempUnits_f">{{ (((temperature_2m_max[5]*9)/5)+32).toFixed(1)}} {{ tempUnits }} </span>
+                  <span class="t-min" v-if="tempUnits==tempUnits_c">{{ temperature_2m_min[5].toFixed(1)}} {{ tempUnits }} </span>
+                  <span class="t-min" v-if="tempUnits==tempUnits_f">{{ (((temperature_2m_min[5]*9)/5)+32).toFixed(1)}} {{ tempUnits }} </span>
                 </section> 
           </section>
         </section>
@@ -103,6 +115,9 @@
               <section class="highlights-arriba-izquierda">
                 <p class="wind-spped">Wind Statuts</p>
                 <p class= "wind-value" v-if="wind_speed_10m">{{ wind_speed_10m }} {{ windUnits }}</p>
+                <div class= "wind-direction" >
+                  <p v-if="wind_direction_10m">{{ wind_direction_10m }} {{ wind_direction_units }}</p>
+                </div>
               </section>
               <section class="highlights-arriba-derecha">
                 <p class="humidity">Humidity</p>
@@ -152,9 +167,9 @@ const temperature_2m = ref(null);
 const temperature_2m_max = ref(null);
 const temperature_2m_min = ref(null);
 
-let tempUnits_c = ref(null);
-let tempUnits_f = ref(null);
-let tempUnits = ref(null);
+const tempUnits_c = ref(null);
+const tempUnits_f = ref(null);
+const tempUnits = ref(null);
 
 const time = ref(null);
 
@@ -162,7 +177,9 @@ const visibility = ref(null);
 const visibUnits = ref(null);
 
 const wind_speed_10m = ref(null);
+const wind_direction_10m= ref(null);
 const windUnits = ref(null);
+const wind_direction_units= ref(null);
 
 const relative_humidity_2m=ref(null);
 const humidUnits=ref(null);
@@ -211,6 +228,8 @@ const getData = async () => {
     tempUnits_c.value = response_c.data.current_units.temperature_2m;
 
     tempUnits_f.value = response_f.data.current_units.temperature_2m;
+
+    tempUnits.value=tempUnits_c.value;
     
     time.value = response_c.data.current.time;
     
@@ -219,8 +238,12 @@ const getData = async () => {
     visibUnits.value = response_c.data.hourly_units.visibility;
 
     wind_speed_10m.value = response_c.data.current.wind_speed_10m;
+
+    wind_direction_10m.value = response_c.data.current.wind_direction_10m;
    
     windUnits.value = response_c.data.current_units.wind_speed_10m;
+
+    wind_direction_units.value=response_c.data.current_units.wind_direction_10m;
 
     relative_humidity_2m.value = response_c.data.hourly.relative_humidity_2m[0];
 

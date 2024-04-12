@@ -1,4 +1,4 @@
-*{
+* {
 
   font-family: Arial, Helvetica, sans-serif;
 
@@ -6,7 +6,8 @@
 
 .container {
   display: flex;
-  height: 100vh; /* Ajusta la altura del contenedor principal al 100% de la ventana */
+  height: 100vh;
+  /* Ajusta la altura del contenedor principal al 100% de la ventana */
 }
 
 .menu-izq {
@@ -22,17 +23,19 @@
   background-color: #1e213a;
   color: white;
   padding: 2rem;
-  height:96%;
+  height: 96%;
 }
 
 .content-der {
   background-color: #100e1d;
   width: 75%;
-  height: 100vh; /* Ajusta la altura al 100% de la ventana */
+  height: 100vh;
+  /* Ajusta la altura al 100% de la ventana */
   display: flex;
   flex-direction: column;
   align-items: stretch;
 }
+
 .write-country {
   color: white;
   background-color: #949496;
@@ -133,13 +136,13 @@
   height: 12rem;
   background-color: #1e213a;
   flex-direction: row;
-  color:white;
-  
+  color: white;
+
 }
 
 .days-left {
 
-  padding-top:1.2rem;
+  padding-top: 1.2rem;
   text-align: center;
 
 }
@@ -150,14 +153,13 @@
   align-items: flex-end;
   justify-content: space-evenly;
   margin-top: 1rem;
-  color:white;
+  color: white;
 
 }
 
 .t-min {
 
-  color:rgb(172, 170, 170)
-
+  color: rgb(172, 170, 170)
 }
 
 .title-highlights {
@@ -191,139 +193,151 @@
   margin-right: 4rem;
 }
 
-.highlights-arriba-derecha{
-  width: 100%; /* Cambia el ancho a 100% */
+.highlights-arriba-derecha {
+  width: 100%;
+  /* Cambia el ancho a 100% */
   height: 13rem;
   background-color: #1e213a;
-  margin-right:2.5rem;
-  margin-left:1rem;
+  margin-right: 2.5rem;
+  margin-left: 1rem;
 }
+
 .highlights-arriba-izquierda {
 
-  width: 100%; /* Cambia el ancho a 100% */
+  width: 100%;
+  /* Cambia el ancho a 100% */
   height: 13rem;
   background-color: #1e213a;
-  margin-left:2.5rem;
-  margin-right:1rem;
+  margin-left: 2.5rem;
+  margin-right: 1rem;
 }
+
 .highlights-abajo-derecha {
-  width: 100%; /* Cambia el ancho a 100% */
+  width: 100%;
+  /* Cambia el ancho a 100% */
   height: 9rem;
   background-color: #1e213a;
-  margin-right:2.5rem;
-  margin-left:1rem;
+  margin-right: 2.5rem;
+  margin-left: 1rem;
 }
+
 .highlights-abajo-izquierda {
-  width: 100%; /* Cambia el ancho a 100% */
+  width: 100%;
+  /* Cambia el ancho a 100% */
   height: 9rem;
   background-color: #1e213a;
-  margin-right:1rem;
-  margin-left:2.5rem;
+  margin-right: 1rem;
+  margin-left: 2.5rem;
 }
 
-.wind-spped, .humidity, .visibillity, .air {
+.wind-spped,
+.humidity,
+.visibillity,
+.air {
 
-  padding:1rem;
-  color:white;
+  padding: 1rem;
+  padding-top: 1rem;
+  color: white;
   text-align: center;
 }
 
-.temp-value{
+.temp-value {
 
-  color:white;
+  color: white;
   font-size: 5rem;
   text-align: center;
-  margin-top:12rem;
+  margin-top: 12rem;
 }
 
 .weather {
-  
-  margin-top:5rem;
-  margin-left:7.3rem;
-  width:15rem;
+
+  margin-top: 5rem;
+  margin-left: 7.3rem;
+  width: 15rem;
 
 }
 
-.weather-days-left{
-  margin-top:1rem;
-  width:5rem;
-  margin-left:2.5rem
+.weather-days-left {
+  margin-top: 1rem;
+  width: 5rem;
+  margin-left: 2.5rem
 }
 
-.date  {
+.date {
 
-  color:rgb(172, 170, 170);
- text-align: center;
-  margin-top:7rem;
+  color: rgb(172, 170, 170);
+  text-align: center;
+  margin-top: 7rem;
 }
 
 .country-value {
- color:rgb(172, 170, 170);
-text-align: center;
- margin-top:2rem;
+  color: rgb(172, 170, 170);
+  text-align: center;
+  margin-top: 2rem;
 }
 
-.visib-value{
+.visib-value {
 
-  color:white;
+  color: white;
   font-size: 3rem;
-  margin-left:35%;
-
-}
-
-.wind-value{
-
-  color:white;
-  font-size: 3rem;
-  padding-left:35%;
-  padding-top:2rem;
+  margin-left: 35%;
 
 }
 
-.humid-value{
+.wind-value {
 
-  color:white;
+  color: white;
   font-size: 3rem;
-  padding-left:40%;
-  padding-top:2rem;
+  padding-left: 35%;
+  padding-top: 2rem;
 
 }
 
-.air-value{
+.humid-value {
 
-  color:white;
+  color: white;
   font-size: 3rem;
-  padding-left:30%;
-  padding-top:0.3rem;
+  padding-left: 40%;
+  padding-top: 2rem;
+
+}
+
+.air-value {
+
+  color: white;
+  font-size: 3rem;
+  padding-left: 30%;
+  padding-top: 0.3rem;
 
 }
 
 .final {
 
-  color:rgb(172, 170, 170);
+  color: rgb(172, 170, 170);
   text-align: center;
-  margin-top:8rem;
+  margin-top: 8rem;
 
 }
 
 .nombre {
 
   text-decoration: underline;
-  color:white;
+  color: white;
 
 }
 
 .botones {
 
-  display:flex;
+  display: flex;
   justify-content: flex-end;
-  margin-right:7%;
-  margin-top:2%;
+  margin-right: 7%;
+  margin-top: 2%;
 }
-.celsius{
+
+.celsius {
 
 
-  border-radius:1rem;
+  border-radius: 1rem;
   font-weight: bold;
   color: white;
   height: 2rem;
@@ -332,13 +346,13 @@ text-align: center;
   cursor: pointer;
   transition: 0.3s ease;
   padding: 0.5rem;
-  margin-right:1%;
+  margin-right: 1%;
 }
 
 .farenheit {
 
 
-  border-radius:1rem;
+  border-radius: 1rem;
   font-weight: bold;
   color: white;
   height: 2rem;
@@ -350,85 +364,90 @@ text-align: center;
 
 }
 
-.farenheit:hover, .celsius:hover {
+.farenheit:hover,
+.celsius:hover {
 
-  border-color:white
-
+  border-color: white
 }
 
 .ubicacion {
 
-  display:flex;
+  display: flex;
   justify-content: center;
 
 }
 
 .ubication-img {
 
-  margin-top:1.5rem;
-  width:2rem;
+  margin-top: 1.5rem;
+  width: 2rem;
   height: 2rem;
 
 }
 
 .humidity-bar {
- 
+
   width: 70%;
-  margin-left:5rem;
-  height: 10px;
+  margin-left: 5rem;
+  height: 0.625rem;
   background-color: #ddd;
-  border-radius: 5px;
-  margin-top: 5px;
+  border-radius: 0.3125rem;
+
 }
 
 .humidity-fill {
   height: 100%;
   background-color: #4CAF50;
-  border-radius: 5px;
+  border-radius: 0.3125rem;
 }
 
 .num-por {
 
-  display:flex;
+  display: flex;
   justify-content: space-around;
-  color:white;
-  margin-top:1rem;
+  color: white;
+  margin-top: 1rem;
 
+}
+
+.wind-direction {
+  color: white;
+  font-size: 1.5rem;
 }
 
 @media (max-width: 70rem) {
 
   .container {
-    display:flex; 
+    display: flex;
     flex-direction: column;
-   
+
   }
 
   .menu-izq {
 
-    width:96vw;
-    padding-left:15rem;
+    width: 96vw;
+    padding-left: 15rem;
 
   }
 
-  .menu-izq-search{
+  .menu-izq-search {
 
     padding-bottom: 0.125rem;
-    padding-left:1rem;
-    padding-right:15rem;
+    padding-left: 1rem;
+    padding-right: 15rem;
   }
 
   .cruz-y-texto {
     display: flex;
     flex-direction: column;
   }
-  
+
   .cruz {
     order: -1;
     margin-bottom: 1rem;
-    margin-left:0;
+    margin-left: 0;
   }
-  
+
   .country {
     width: 60%;
     height: 2rem;
@@ -442,7 +461,7 @@ text-align: center;
 
   .content-der {
 
-    width:120.8vw;
+    width: 120.8vw;
     height: 330vh;
   }
 
@@ -453,32 +472,35 @@ text-align: center;
     align-content: center;
     justify-content: flex-start;
     margin-top: 2rem;
-    margin-left:16rem;
+    margin-left: 16rem;
     width: 50%;
   }
-  
+
   .en-un-dia,
   .en-dos-dias,
   .en-tres-dias,
   .en-cuatro-dias,
   .en-cinco-dias {
-    width: calc(50% - 1rem); /* Calcular el ancho del 50% menos el margen izquierdo */
-    margin-bottom: 1rem; /* Agregar margen inferior para separar los elementos */
-}
+    width: calc(50% - 1rem);
+    /* Calcular el ancho del 50% menos el margen izquierdo */
+    margin-bottom: 1rem;
+    /* Agregar margen inferior para separar los elementos */
+  }
 
-  .en-dos-dias{
+  .en-dos-dias {
 
     margin-left: 1rem;
 
   }
+
   .en-tres-dia,
   .en-cuatro-dias {
     margin-left: 1rem;
   }
 
-  .title-highlights{
+  .title-highlights {
 
-    margin-left:32rem;
+    margin-left: 32rem;
   }
 
   .highlights-arriba,
@@ -486,41 +508,40 @@ text-align: center;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    margin-left:9rem;
+    margin-left: 9rem;
     margin-right: 40rem;
-    
+
   }
+
   .highlights-arriba-izquierda,
-  .highlights-arriba-derecha
-  {
-    width:50rem;
-    margin-left:7rem;
+  .highlights-arriba-derecha {
+    width: 50rem;
+    margin-left: 7rem;
     margin-right: 7rem;
     margin-top: 2rem;
   }
 
   .highlights-abajo-izquierda,
-  .highlights-abajo-derecha
-  {
-    width:50rem;
-    margin-left:7rem;
+  .highlights-abajo-derecha {
+    width: 50rem;
+    margin-left: 7rem;
     margin-right: 7rem;
     margin-bottom: 2rem;
- 
+
   }
 
   .final {
 
-    color:rgb(172, 170, 170);
+    color: rgb(172, 170, 170);
     text-align: center;
-    margin-top:3rem;
-    margin-bottom:0.5rem
+    margin-top: 3rem;
+    margin-bottom: 0.5rem
   }
-  
+
   .nombre {
-  
+
     text-decoration: underline;
-    color:white;
+    color: white;
 
   }
 
