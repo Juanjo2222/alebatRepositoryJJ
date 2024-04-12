@@ -34,65 +34,64 @@
         <section class="cinco-dias">  
           <section class="en-un-dia">
               <p class="days-left">Tomorrow</p>
-              <img class="weather-days-left" v-if="weather_code_daily[1]==0" src="../assets/sunny.png">
-              <img class="weather-days-left" v-if="weather_code_daily[1]==1" src="../assets/cloudy.png">
-              <img class="weather-days-left" v-if="weather_code_daily[1]==2" src="../assets/windy.png">
-              <img class="weather-days-left" v-if="weather_code_daily[1]==3" src="../assets/rainy.png">
-              <img class="weather-days-left" v-if="weather_code_daily[1]==61"  src="../assets/snowy.png">
-              <img class="weather-days-left" v-if="weather_code_daily[1]==80"  src="../assets/stormy.png">
-                <section class="days-left-temp">
+              <img class="weather-days-left" v-if="weather_code_daily && weather_code_daily[1]==0" src="../assets/sunny.png">
+              <img class="weather-days-left" v-if="weather_code_daily && weather_code_daily[1]==1" src="../assets/cloudy.png">
+              <img class="weather-days-left" v-if="weather_code_daily && weather_code_daily[1]==2" src="../assets/windy.png">
+              <img class="weather-days-left" v-if="weather_code_daily && weather_code_daily[1]==3" src="../assets/rainy.png">
+              <img class="weather-days-left" v-if="weather_code_daily && weather_code_daily[1]==61"  src="../assets/snowy.png">
+              <img class="weather-days-left" v-if="temperature_2m_max && temperature_2m_min"  src="../assets/stormy.png">
+              <section class="days-left-temp" v-if="temperature_2m_max && temperature_2m_min">
                   {{ temperature_2m_max[1]}} {{ tempUnits }}
                   <span class="t-min">{{ temperature_2m_min[1]}} {{ tempUnits }} </span>
                 </section>
           </section>
           <section class="en-dos-dias">
               <p class="days-left">2 days left</p>
-              <img class="weather-days-left" v-if="weather_code_daily[2]==0" src="../assets/sunny.png">
-              <img class="weather-days-left" v-if="weather_code_daily[2]==1" src="../assets/cloudy.png">
-              <img class="weather-days-left" v-if="weather_code_daily[2]==2" src="../assets/windy.png">
-              <img class="weather-days-left" v-if="weather_code_daily[2]==3" src="../assets/rainy.png">
-              <img class="weather-days-left" v-if="weather_code_daily[2]==61"  src="../assets/snowy.png">
-              <img class="weather-days-left" v-if="weather_code_daily[2]==80"  src="../assets/stormy.png">
-                <section class="days-left-temp">
+              <img class="weather-days-left" v-if="weather_code_daily && weather_code_daily[2]==0" src="../assets/sunny.png">
+              <img class="weather-days-left" v-if="weather_code_daily && weather_code_daily[2]==1" src="../assets/cloudy.png">
+              <img class="weather-days-left" v-if="weather_code_daily && weather_code_daily[2]==2" src="../assets/windy.png">
+              <img class="weather-days-left" v-if="weather_code_daily && weather_code_daily[2]==3" src="../assets/rainy.png">
+              <img class="weather-days-left" v-if="weather_code_daily && weather_code_daily[2]==61"  src="../assets/snowy.png">
+              <img class="weather-days-left" v-if="weather_code_daily && weather_code_daily[2]==80"  src="../assets/stormy.png">
+                <section class="days-left-temp" v-if="temperature_2m_max && temperature_2m_min">
                   {{ temperature_2m_max[2]}} {{ tempUnits }}
                   <span class="t-min">{{ temperature_2m_min[2]}} {{ tempUnits }}</span>
                 </section>
           </section>
           <section class="en-tres-dias">
               <p class="days-left">3 days left</p>
-              <img class="weather-days-left" v-if="weather_code_daily[3]==0" src="../assets/sunny.png">
-              <img class="weather-days-left" v-if="weather_code_daily[3]==1" src="../assets/cloudy.png">
-              <img class="weather-days-left" v-if="weather_code_daily[3]==2" src="../assets/windy.png">
-              <img class="weather-days-left" v-if="weather_code_daily[3]==3" src="../assets/rainy.png">
-              <img class="weather-days-left" v-if="weather_code_daily[3]==61"  src="../assets/snowy.png">
-              <img class="weather-days-left" v-if="weather_code_daily[3]==80"  src="../assets/stormy.png">
-                <section class="days-left-temp">
+              <img class="weather-days-left" v-if="weather_code_daily && weather_code_daily[3]==0" src="../assets/sunny.png">
+              <img class="weather-days-left" v-if="weather_code_daily && weather_code_daily[3]==1" src="../assets/cloudy.png">
+              <img class="weather-days-left" v-if="weather_code_daily && weather_code_daily[3]==2" src="../assets/windy.png">
+              <img class="weather-days-left" v-if="weather_code_daily && weather_code_daily[3]==3" src="../assets/rainy.png">
+              <img class="weather-days-left" v-if="weather_code_daily && weather_code_daily[3]==61"  src="../assets/snowy.png">
+              <img class="weather-days-left" v-if="weather_code_daily && weather_code_daily[3]==80"  src="../assets/stormy.png">
+                <section class="days-left-temp" v-if="temperature_2m_max && temperature_2m_min">
                   {{ temperature_2m_max[3]}} {{ tempUnits }}
                   <span class="t-min">{{ temperature_2m_min[3]}}{{ tempUnits }} </span>
                 </section>
           </section>
           <section class="en-cuatro-dias">
               <p class="days-left">4 days left</p>
-              <img class="weather-days-left" v-if="weather_code_daily[4]==0" src="../assets/sunny.png">
-              <img class="weather-days-left" v-if="weather_code_daily[4]==1" src="../assets/cloudy.png">
-              <img class="weather-days-left" v-if="weather_code_daily[4]==2" src="../assets/windy.png">
-              <img class="weather-days-left" v-if="weather_code_daily[4]==3" src="../assets/rainy.png">
-              <img class="weather-days-left" v-if="weather_code_daily[4]==61"  src="../assets/snowy.png">
-              <img class="weather-days-left" v-if="weather_code_daily[4]==80"  src="../assets/stormy.png">
-                <section class="days-left-temp">
+              <img class="weather-days-left" v-if="weather_code_daily && weather_code_daily[4]==0" src="../assets/sunny.png">
+              <img class="weather-days-left" v-if="weather_code_daily && weather_code_daily[4]==2" src="../assets/windy.png">
+              <img class="weather-days-left" v-if="weather_code_daily && weather_code_daily[4]==3" src="../assets/rainy.png">
+              <img class="weather-days-left" v-if="weather_code_daily && weather_code_daily[4]==61"  src="../assets/snowy.png">
+              <img class="weather-days-left" v-if="weather_code_daily && weather_code_daily[4]==80"  src="../assets/stormy.png">
+                <section class="days-left-temp" v-if="temperature_2m_max && temperature_2m_min">
                   {{ temperature_2m_max[4]}} {{ tempUnits }}
                   <span class="t-min">{{ temperature_2m_min[4]}} {{ tempUnits }} </span>
                 </section>
           </section>
           <section class="en-cinco-dias">
               <p class="days-left">5 days left</p>
-              <img class="weather-days-left" v-if="weather_code_daily[5]==0" src="../assets/sunny.png">
-              <img class="weather-days-left" v-if="weather_code_daily[5]==1" src="../assets/cloudy.png">
-              <img class="weather-days-left" v-if="weather_code_daily[5]==2" src="../assets/windy.png">
-              <img class="weather-days-left" v-if="weather_code_daily[5]==3" src="../assets/rainy.png">
-              <img class="weather-days-left" v-if="weather_code_daily[5]==61"  src="../assets/snowy.png">
-              <img class="weather-days-left" v-if="weather_code_daily[5]==80"  src="../assets/stormy.png">
-                <section class="days-left-temp">
+              <img class="weather-days-left" v-if="weather_code_daily && weather_code_daily[5]==0" src="../assets/sunny.png">
+              <img class="weather-days-left" v-if="weather_code_daily && weather_code_daily[5]==1" src="../assets/cloudy.png">
+              <img class="weather-days-left" v-if="weather_code_daily && weather_code_daily[5]==2" src="../assets/windy.png">
+              <img class="weather-days-left" v-if="weather_code_daily && weather_code_daily[5]==3" src="../assets/rainy.png">
+              <img class="weather-days-left" v-if="weather_code_daily && weather_code_daily[5]==61"  src="../assets/snowy.png">
+              <img class="weather-days-left" v-if="weather_code_daily && weather_code_daily[5]==80"  src="../assets/stormy.png">
+                <section class="days-left-temp" v-if="temperature_2m_max && temperature_2m_min">
                   {{ temperature_2m_max[5]}} {{ tempUnits }} 
                   <span class="t-min">{{ temperature_2m_min[5]}} {{ tempUnits }}</span>
                 </section> 
@@ -128,7 +127,7 @@
                 <p class= "air-value" v-if="surface_pressure">{{ surface_pressure }} {{ airUnits }}</p>
               </section>
             </section>
-          </section>
+            </section>
           <p class="final">Created by <span class="nombre">{{nombre}}</span> - devChallenges.io</p>
     </section>
   </div>
