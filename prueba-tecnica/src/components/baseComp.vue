@@ -39,7 +39,7 @@
               <img class="weather-days-left" v-if="weather_code_daily && weather_code_daily[1]==2" src="../assets/windy.png">
               <img class="weather-days-left" v-if="weather_code_daily && weather_code_daily[1]==3" src="../assets/rainy.png">
               <img class="weather-days-left" v-if="weather_code_daily && weather_code_daily[1]==61"  src="../assets/snowy.png">
-              <img class="weather-days-left" v-if="temperature_2m_max && temperature_2m_min"  src="../assets/stormy.png">
+              <img class="weather-days-left" v-if="weather_code_daily && weather_code_daily[1]==80"  src="../assets/stormy.png">
               <section class="days-left-temp" v-if="temperature_2m_max && temperature_2m_min">
                   {{ temperature_2m_max[1]}} {{ tempUnits }}
                   <span class="t-min">{{ temperature_2m_min[1]}} {{ tempUnits }} </span>
